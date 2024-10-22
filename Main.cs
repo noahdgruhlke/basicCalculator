@@ -37,8 +37,18 @@ public class Calculator
         var userInput = Console.ReadLine();
         
         if (userInput == "quit") 
-        { 
+        {
+            Console.WriteLine("Thank you for using the calculator! Exiting now...");
+
+            System.Threading.Thread.Sleep(1000);
+
             Environment.Exit(0);
+        }
+        if (userInput == "")
+        {
+            Console.WriteLine("No input! Please try again!");
+
+            return GetInput();
         }
 
         string[] parts = userInput.Split(' ');
@@ -97,25 +107,6 @@ public class Calculator
                     break;
             }
         } 
-
-        //foreach (int number in allMyNumbers)
-        //{
-        //    switch (operation)
-        //    {
-        //        case OPERATIONTYPES.addition:
-        //            result += number;
-        //            break;
-        //        case OPERATIONTYPES.subtraction:
-        //            result -= number;
-        //            break;
-        //        case OPERATIONTYPES.mulit:
-        //            result *= number;
-        //            break;
-        //        case OPERATIONTYPES.divide:
-        //            result /= number;
-        //            break;
-        //    }
-        //}
 
         return result;
     }
