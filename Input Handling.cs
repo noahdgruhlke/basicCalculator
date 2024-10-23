@@ -51,6 +51,11 @@ namespace basicCalculator
                     case "/":
                         Operation = OPERATIONTYPES.divide;
                         continue;
+                    case "=":
+                        //question: tried the following: throw new NotImplementedException();
+                        //this code didn't work. Why?
+                        Console.WriteLine("This is not a valid input");
+                        return GetInput();
                     default:
                         int result = int.Parse(part);
 

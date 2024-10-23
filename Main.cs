@@ -13,8 +13,13 @@ public class Calculator
 {
     public static void Main(string[] args)
     {
+        Operations operations = new Operations();
+
+        Input_Handling input_Handling = new Input_Handling();
+
         while (true)
         {
+            // loops the users input so we can keep answering math questions
             Console.WriteLine("The answer is " + Input_Handling.GetInput());
         }
 
@@ -33,6 +38,8 @@ public class Calculator
 
     public static int DoTheThingMason(List<int> allMyNumbers, OPERATIONTYPES operation) 
     {
+        //responsible for doing the math operations after the user ups numbers in
+
         int result = allMyNumbers[0];
 
         for(int i = 1; i < allMyNumbers.Count; i++)
